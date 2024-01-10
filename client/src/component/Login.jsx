@@ -63,6 +63,11 @@ export default function Login() {
                 >
                   Password
                 </label>
+                <div className="text-sm">
+                  <Link to={'/forgetpassword'} className="font-semibold text-indigo-600 hover:text-indigo-500">
+                    Forgot password?
+                  </Link>
+                </div>
               </div>
               <div className="mt-2">
                 <input
@@ -84,16 +89,12 @@ export default function Login() {
                 Sign in
               </button>
             </div>
+            <div>
+              <Link to={"/register"} className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm">
+                Sign Up
+              </Link>
+              </div>
           </form>
-          <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{" "}
-            <Link
-              to={'/register'}
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-            >
-              Start a 14 day free trial
-            </Link>
-          </p>
         </div>
       </div>
     </>

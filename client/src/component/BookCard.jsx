@@ -1,33 +1,21 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
- 
-export function BookCard({book}) {
-    const {judul, author, image} = book;
+import React from "react";
+import { Link } from "react-router-dom";
+
+export function BookCard({ book }) {
+  const { judul, author, image } = book;
+  console.log("---------" + book)
   return (
-    <Card className="mt-6 w-96">
-      <CardHeader color="blue-gray" className="relative h-56">
+    <Link to={`/detail/${book._id}`} className="group">
+    <>
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
         <img
-        src={image}
-          alt="card-image"
+          src={image}
+          className="h-full w-full object-cover object-center group-hover:opacity-75"
         />
-      </CardHeader>
-      <CardBody>
-        <Typography variant="h5" color="blue-gray" className="mb-2">
-          {judul}
-        </Typography>
-        <Typography>
-          {author}
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0">
-        <Button>Read More</Button>
-      </CardFooter>
-    </Card>
+      </div>
+      <h3 className="mt-4 text-sm text-gray-700">{judul}</h3>
+      <p className="mt-1 text-lg font-medium text-gray-900">{author}</p>
+    </>
+    </Link>
   );
 }

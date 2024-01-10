@@ -1,5 +1,5 @@
 import React ,{useState} from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Signup() {
@@ -95,14 +95,9 @@ export default function Signup() {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign in
+                Input
               </button>
             </div>
-            <div>
-              <Link to={"/login"} className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm">
-                Login
-              </Link>
-              </div>
           </form>
         </div>
       </div>

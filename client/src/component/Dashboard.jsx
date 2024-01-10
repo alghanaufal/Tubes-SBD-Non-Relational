@@ -3,12 +3,12 @@ import axios from "axios";
 import { BookCard } from "./BookCard";
 
 export default function Dashboard() {
-    const [books, setBook] = useState([])
+    const [books, setBooks] = useState([])
     useEffect(() =>{
-        axios.get('http://localhost:3001/books')
+        axios.get('http://localhost:3001/api/books')
         .then(res => {
-            setBook(err.data.book)
-            console.log(err.data)
+            setBooks(res.data.books)
+            console.log(res.data)
         }).catch(err => {console.log(err)});
     }, [])
   return (
@@ -17,8 +17,9 @@ export default function Dashboard() {
         <h2 className="sr-only">Books</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {books.map(book => {
-            return <BookCard key={book.id} book = {book}></BookCard>
+          {
+          books.map(book => {
+            return<BookCard key={book.id} book={book}></BookCard>
           })
           }
         </div>
