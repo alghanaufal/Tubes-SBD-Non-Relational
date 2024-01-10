@@ -1,0 +1,183 @@
+[
+  {
+    "judul": "The Great Gatsby",
+    "pengarang": "F. Scott Fitzgerald",
+    "harga": 250000,
+    "deskripsi": "Sebuah novel klasik yang menggambarkan kehidupan mewah di era Roaring Twenties.",
+    "cover": "cover1.jpeg",
+    "kategori": ["Fiksi", "Klasik"],
+    "bahasa": "Inggris"
+  },
+  {
+    "judul": "To Kill a Mockingbird",
+    "pengarang": "Harper Lee",
+    "harga": 200000,
+    "deskripsi": "Sebuah novel tentang keadilan dan rasisme di Amerika Selatan.",
+    "cover": "cover2.jpg",
+    "kategori": ["Fiksi", "Klasik"],
+    "bahasa": "Inggris"
+  },
+  {
+    "judul": "1984",
+    "pengarang": "George Orwell",
+    "harga": 180000,
+    "deskripsi": "Sebuah novel distopia yang menggambarkan masyarakat yang dikendalikan oleh pemerintah.",
+    "cover": "cover3.jpeg",
+    "kategori": ["Fiksi", "Dystopia"],
+    "bahasa": "Inggris"
+  },
+  {
+    "judul": "Panduan Belajar Bahasa Indonesia",
+    "pengarang": "Dewi Kurniasih",
+    "harga": 120000,
+    "deskripsi": "Buku panduan belajar bahasa Indonesia untuk pemula hingga tingkat lanjutan.",
+    "cover": "cover4.jpg",
+    "kategori": ["Pelajaran", "Bahasa Indonesia"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Matematika Dasar untuk SMP",
+    "pengarang": "Budi Hartanto",
+    "harga": 150000,
+    "deskripsi": "Buku panduan matematika dasar untuk siswa SMP.",
+    "cover": "cover5.png",
+    "kategori": ["Pelajaran", "Matematika"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Sejarah Indonesia Modern",
+    "pengarang": "Siti Nurlela",
+    "harga": 180000,
+    "deskripsi": "Buku sejarah Indonesia modern dari era kolonial hingga kemerdekaan.",
+    "cover": "cover6.jpg",
+    "kategori": ["Pelajaran", "Sejarah"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Kimia SMA Kelas XII",
+    "pengarang": "Andi Wijaya",
+    "harga": 160000,
+    "deskripsi": "Buku panduan kimia untuk siswa SMA kelas XII.",
+    "cover": "cover7.jpg",
+    "kategori": ["Pelajaran", "Kimia"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Fisika SMA Kelas XI",
+    "pengarang": "Rina Susanto",
+    "harga": 170000,
+    "deskripsi": "Buku panduan fisika untuk siswa SMA kelas XI.",
+    "cover": "cover8.jpg",
+    "kategori": ["Pelajaran", "Fisika"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Biology for Beginners",
+    "pengarang": "Diana Santoso",
+    "harga": 140000,
+    "deskripsi": "A beginner's guide to biology with easy-to-understand explanations.",
+    "cover": "cover9.png",
+    "kategori": ["Pelajaran", "Biology"],
+    "bahasa": "English"
+  },
+  {
+    "judul": "Introduction to Java Programming",
+    "pengarang": "Hadi Sutopo",
+    "harga": 200000,
+    "deskripsi": "A comprehensive guide to Java programming for beginners.",
+    "cover": "cover10.jpg",
+    "kategori": ["Pelajaran", "Programming"],
+    "bahasa": "English"
+  },
+  {
+    "judul": "Basic Economics Principles",
+    "pengarang": "Ari Wibowo",
+    "harga": 190000,
+    "deskripsi": "Understanding the fundamental principles of economics for students.",
+    "cover": "cover11.jpg",
+    "kategori": ["Pelajaran", "Economics"],
+    "bahasa": "English"
+  },
+  {
+    "judul": "Introduction to Psychology",
+    "pengarang": "Linda Anderson",
+    "harga": 220000,
+    "deskripsi": "An introduction to the basics of psychology for students and enthusiasts.",
+    "cover": "cover12.jpeg",
+    "kategori": ["Pelajaran", "Psychology"],
+    "bahasa": "English"
+  },
+  {
+    "judul": "Environmental Science Essentials",
+    "pengarang": "Rini Utami",
+    "harga": 180000,
+    "deskripsi": "Essential concepts in environmental science for students and researchers.",
+    "cover": "cover13.jpg",
+    "kategori": ["Pelajaran", "Environmental Science"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Laskar Pelangi",
+    "pengarang": "Andrea Hirata",
+    "harga": 180000,
+    "deskripsi": "Novel yang menceritakan tentang perjuangan sekelompok anak muda di Belitong untuk meraih pendidikan.",
+    "cover": "cover14.jpg",
+    "kategori": ["Fiksi", "Drama"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Ayat-Ayat Cinta",
+    "pengarang": "Habiburrahman El-Shirazy",
+    "harga": 160000,
+    "deskripsi": "Kisah cinta seorang mahasiswa Indonesia di Kairo, Mesir, yang diwarnai oleh nilai-nilai agama.",
+    "cover": "cover15.jpg",
+    "kategori": ["Fiksi", "Romance"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Bumi Manusia",
+    "pengarang": "Pramoedya Ananta Toer",
+    "harga": 200000,
+    "deskripsi": "Sebuah saga sejarah Indonesia yang menggambarkan kehidupan di awal abad ke-20.",
+    "cover": "cover16.jpg",
+    "kategori": ["Fiksi", "Sejarah"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Perahu Kertas",
+    "pengarang": "Dee Lestari",
+    "harga": 150000,
+    "deskripsi": "Novel yang menceritakan tentang perjalanan cinta dan persahabatan.",
+    "cover": "cover17.jpg",
+    "kategori": ["Fiksi", "Romance"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Matahari",
+    "pengarang": "Tere Liye",
+    "harga": 170000,
+    "deskripsi": "Sebuah novel yang menggambarkan berbagai konflik dan perubahan sosial di Indonesia.",
+    "cover": "cover18.jpg",
+    "kategori": ["Fiksi", "Politik"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Ronggeng Dukuh Paruk",
+    "pengarang": "Ahmad Tohari",
+    "harga": 190000,
+    "deskripsi": "Kisah seorang penari ronggeng dan pengalaman tragisnya di desa.",
+    "cover": "cover19.jpg",
+    "kategori": ["Fiksi", "Drama"],
+    "bahasa": "Indonesia"
+  },
+  {
+    "judul": "Pulang",
+    "pengarang": "Leila S. Chudori",
+    "harga": 210000,
+    "deskripsi": "Sebuah novel sejarah yang mengangkat kisah perjalanan beberapa generasi keluarga di masa lalu.",
+    "cover": "cover20.jpg",
+    "kategori": ["Fiksi", "Sejarah"],
+    "bahasa": "Indonesia"
+  }
+]
+

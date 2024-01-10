@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Alghaniyu Naufal Hamid",
+    "email": "alghaniyu@gmail.com",
+    "password": "alghaniyu123",
+    "phone": "081122334455",
+    "adress": "Bekasi"
+  },
+  {
+    "name": "Indah Resti Fauzi",
+    "email": "indah@gmail.com",
+    "password": "indah123",
+    "phone": "086677889900",
+    "adress": "Sumedang"
+  },
+  {
+    "name": "Afina Rachmani",
+    "email": "afina@gmail.com",
+    "password": "afina123",
+    "phone": "085544332211",
+    "adress": "Bandung"
+  },
+  {
+    "name": "Muhammad Fakhri",
+    "email": "fakhri@gmail.com",
+    "password": "fakhri123",
+    "phone": "080099887766",
+    "adress": "Bandung"
+  }
+]

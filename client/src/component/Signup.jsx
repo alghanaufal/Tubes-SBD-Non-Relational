@@ -1,21 +1,31 @@
-import React ,{useState} from "react";
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Signup() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [adress, setAdress] = useState();
   const [password, setPassword] = useState();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/register', {name, email, password})
-    .then(result => {console.log(result)
-      navigate('/login')
-    })
-    .catch(error => console.log(error))
-  }
+    e.preventDefault();
+    axios
+      .post("http://localhost:3001/register", {
+        name,
+        email,
+        password,
+        phone,
+        adress,
+      })
+      .then((result) => {
+        console.log(result);
+        navigate("/login");
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
@@ -33,12 +43,12 @@ export default function Signup() {
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
+            <div>
               <label
                 htmlFor="name"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Username 
+                Username
               </label>
               <div className="mt-2">
                 <input
@@ -52,7 +62,7 @@ export default function Signup() {
                 />
               </div>
             </div>
-            
+
             <div>
               <label
                 htmlFor="email"
@@ -69,10 +79,48 @@ export default function Signup() {
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={(e) => setEmail(e.target.value)}
-                  />
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Phone
+              </label>
+              <div className="mt-2">
+                <input
+                  id="phone"
+                  name="phone"
+                  type="text"
+                  autoComplete="phone"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
             </div>
 
+            <div>
+              <label
+                htmlFor="adress"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                address
+              </label>
+              <div className="mt-2">
+                <input
+                  id="adress"
+                  name="adress"
+                  type="text"
+                  autoComplete="adress"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  onChange={(e) => setAdress(e.target.value)}
+                />
+              </div>
+            </div>
             <div>
               <div className="flex items-center justify-between">
                 <label
@@ -112,10 +160,13 @@ export default function Signup() {
               </button>
             </div>
             <div>
-              <Link to={"/login"} className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm">
+              <Link
+                to={"/login"}
+                className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm"
+              >
                 Login
               </Link>
-              </div>
+            </div>
           </form>
         </div>
       </div>

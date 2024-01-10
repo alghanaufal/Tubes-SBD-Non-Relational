@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const multer = require("multer");
+const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
@@ -77,7 +79,18 @@ app.get("/logout", (req, res) => {
   return res.json({ logout: true });
 });
 
-app.post("/add", (req, res) => {
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/cover'); 
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); 
+  },
+});
+
+const upload = multer({ storage: storage });
+
+app.post("/add", upload.single('image'), (req, res) => {
   BookModel.create(req.body)
     .then((books) => res.json(books))
     .catch((error) => res.json(error));
