@@ -7,6 +7,7 @@ export default function Signup() {
   const [pengarang, setPengarang] = useState("");
   const [cover, setCover] = useState("");
   const [harga, setHarga] = useState(0);
+  const [stok, setStok] = useState(0);
   const [deskripsi, setDeskripsi] = useState("");
   const [kategori, setKategori] = useState([]);
   const [bahasa, setBahasa] = useState("");
@@ -20,6 +21,7 @@ export default function Signup() {
         pengarang,
         cover,
         harga,
+        stok,
         deskripsi,
         kategori,
         bahasa,
@@ -113,6 +115,25 @@ export default function Signup() {
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   onChange={(e) => setHarga(e.target.value)}
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="stok"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Stok
+              </label>
+              <div className="mt-2">
+                <input
+                  id="stok"
+                  name="stok"
+                  type="number"
+                  autoComplete="stok"
+                  required
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  onChange={(e) => setStok(e.target.value)}
                 />
               </div>
             </div>

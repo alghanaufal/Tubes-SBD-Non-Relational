@@ -3,6 +3,7 @@ const BookSchema = new mongoose.Schema({
     judul: String,
     pengarang: String,
     harga: Number,
+    stok: Number,
     deskripsi: String,
     cover: String,
     kategori: [String],

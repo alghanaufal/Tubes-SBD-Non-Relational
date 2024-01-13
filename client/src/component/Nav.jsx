@@ -43,7 +43,7 @@ export default function Nav() {
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  {currentPath != '/' && ( // Hanya tampilkan navigasi jika pengguna sudah login
+                  {currentPath != '/' && ( 
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
                         <Link to={item.name}

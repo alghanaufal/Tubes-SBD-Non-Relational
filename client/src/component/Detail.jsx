@@ -28,16 +28,44 @@ export default function Detail() {
       const confirmBuy = window.confirm(
         `Anda yakin ingin membeli buku '${book.judul}'?`
       );
+  
       if (confirmBuy) {
-        alert(`Anda telah membeli buku '${book.judul}'`);
-
         axios
-          .delete(`http://localhost:3001/api/books/${id}`)
-          .then(() => {
-            navigate("/dashboard");
+          .put(`http://localhost:3001/api/update-stock/${id}`)
+          .then((response) => {
+            const updatedBook = response.data.book;
+  
+            if (updatedBook.stok === 0) {
+              // If stock is 0, add the book to history and delete the book
+              axios
+                .delete(`http://localhost:3001/api/books/${id}`)
+                .then(() => {
+                  // Add book details to history
+                  axios
+                    .post("http://localhost:3001/addhistory", {
+                      judul: updatedBook.judul,
+                      pengarang: updatedBook.pengarang,
+                      cover: updatedBook.cover,
+                      harga: updatedBook.harga,
+                    })
+                    .then((historyResponse) => {
+                      alert(`Anda telah membeli buku '${updatedBook.judul}' dan buku telah dihapus karena stok habis`);
+                      navigate("/dashboard");
+                    })
+                    .catch((historyErr) => {
+                      console.error("Error adding to history:", historyErr);
+                    });
+                })
+                .catch((err) => {
+                  console.error("Error deleting book:", err);
+                });
+            } else {
+              alert(`Anda telah membeli buku '${updatedBook.judul}'`);
+              navigate("/dashboard");
+            }
           })
           .catch((err) => {
-            console.error("Error deleting book:", err);
+            console.error("Error buying book:", err);
           });
       }
     }
@@ -55,7 +83,7 @@ export default function Detail() {
     return <div>Data buku tidak ditemukan.</div>;
   }
 
-  const { judul, pengarang, cover, harga, deskripsi, kategori, bahasa } = book;
+  const { judul, pengarang, cover, harga, stok, deskripsi, kategori, bahasa } = book;
   const imagePath = `/cover/${cover}`;
 
   return (
@@ -120,6 +148,14 @@ export default function Detail() {
               </dt>
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                 {bahasa}
+              </dd>
+            </div>
+            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm font-medium leading-6 text-gray-900">
+                Stok
+              </dt>
+              <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                {stok}
               </dd>
             </div>
             <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
