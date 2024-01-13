@@ -113,6 +113,14 @@ routes.get("/books", async (req, res) => {
     return res.json(err);
   }
 });
+routes.get("/histories", async (req, res) => {
+  try {
+    const histories = await HistoryModel.find();
+    return res.json({ histories });
+  } catch (err) {
+    return res.json(err);
+  }
+})
 app.get("/api/books/:id", async (req, res) => {
   try {
     const bookId = req.params.id;

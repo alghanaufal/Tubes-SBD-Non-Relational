@@ -1,11 +1,12 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "dashboard"},
-  { name: "add"},
+  { name: "Dashboard", page: "dashboard"},
+  { name: "Waiting to Restock", page: "history"},
+  { name: "Sell Book", page: "add"},
 ];
 
 function classNames(...classes) {
@@ -46,7 +47,7 @@ export default function Nav() {
                   {currentPath != '/' && ( 
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
-                        <Link to={item.name}
+                        <Link to={item.page}
                           key={item.name}
                           href={item.href}
                           className={classNames(
